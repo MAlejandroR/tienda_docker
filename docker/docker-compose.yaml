@@ -1,0 +1,63 @@
+# https://platzi.com/tutoriales/2066-docker/10667-docker-para-laravel-mysql/
+  version: '3'
+  services:
+    apache:
+      build:
+        context: apache
+      image: apache:v1
+      container_name: apache
+      restart: always
+      ports:
+        - "21080:80"
+      volumes:
+        - "./app:/var/www/html"
+      networks:
+        - tienda
+    mysql:
+      build:
+        context: mysql
+      image: mysql:v1
+      environment:
+        MYSQL_DATABASE: dwes
+        MYSQL_USER: user
+        MYSQL_PASSWORD: test
+        MYSQL_ROOT_PASSWORD: root
+      restart: always
+      container_name: mysql
+      volumes:
+        - "./db/mysql_data:/var/lib/mysql"
+      networks:
+        - tienda
+    phpmyadmin:
+     build:
+       context: phpmyadmin
+     restart: always
+     environment:
+        MYSQL_USER: user
+        MYSQL_PASSWORD: test
+        MYSQL_ROOT_PASSWORD: root
+        PMA_HOST: mysql
+     depends_on:
+      - mysql
+     networks:
+      - tienda
+#    php:
+#     build:
+#      context: ./php
+#     restart: always
+#     depends_on:
+#      - mysql
+#     networks:
+#      - app
+  networks:
+    tienda:
+      driver: bridge
+
+
+
+
+
+
+
+
+
