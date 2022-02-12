@@ -10,20 +10,21 @@
       ports:
         - "21080:80"
       volumes:
-        - "./app:/var/www/html"
+        - "./../app:/var/www/html"
+        - "./../log:/var/log/apache2/"
       networks:
         - tienda
     mysql:
       build:
         context: mysql
       image: mysql:v1
+      container_name: mysql
       environment:
         MYSQL_DATABASE: dwes
         MYSQL_USER: user
         MYSQL_PASSWORD: test
         MYSQL_ROOT_PASSWORD: root
       restart: always
-      container_name: mysql
       volumes:
         - "./db/mysql_data:/var/lib/mysql"
       networks:
@@ -31,6 +32,7 @@
     phpmyadmin:
      build:
        context: phpmyadmin
+     container_name: phpmyadmin
      restart: always
      environment:
         MYSQL_USER: user
@@ -41,14 +43,17 @@
       - mysql
      networks:
       - tienda
+     ports:
+      - "22080:80"
 #    php:
 #     build:
 #      context: ./php
+#     container_name: php
 #     restart: always
 #     depends_on:
 #      - mysql
 #     networks:
-#      - app
+#      - tienda
   networks:
     tienda:
       driver: bridge

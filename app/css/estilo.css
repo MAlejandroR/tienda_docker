@@ -1,17 +1,25 @@
 fieldset{
-wit
-
+    width: 50%;
+    background: lemonchiffon;
 }
 legend {
-
+    size:2em;
+    color:darkgreen;
 }
 label{
-
+    size:1.5em;
+    color:blue;
+    font-weight: bold;
 }
 input[type:text]{
-
-
+    size:1.2em;
+    color:blue;
 }
 input [type:submit]{
-
+    size:1.5em;
+    color:blue;
+}
+.error{
+    color:darkred;
+    size: 1.4em;
 }
