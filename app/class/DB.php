@@ -13,7 +13,7 @@ class DB extends  mysqli
             parent::__construct(Constantes::HOST, Constantes::USER, Constantes::PASS, Constantes::DATABASE);
         }catch (Exception $e){
             var_dump($this);
-            die("Error conectando ").$this->connect_error;
+            die("Error conectando ".$this->connect_error);
         }
 //          $this->mi_error = $this->connect_errno==0 ? $this->connect_error :: null;
 

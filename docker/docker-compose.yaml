@@ -12,6 +12,8 @@
       volumes:
         - "./../app:/var/www/html"
         - "./../log:/var/log/apache2/"
+      depends_on:
+        - mysql
       networks:
         - tienda
     mysql:

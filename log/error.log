@@ -1,0 +1,14 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sat Feb 12 18:04:13.765026 2022] [mpm_event:notice] [pid 14:tid 140088214383680] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Sat Feb 12 18:04:13.765174 2022] [core:notice] [pid 14:tid 140088214383680] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sat Feb 12 18:07:06.090854 2022] [mpm_prefork:notice] [pid 7] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Sat Feb 12 18:07:06.090901 2022] [core:notice] [pid 7] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sat Feb 12 18:14:22.119216 2022] [core:warn] [pid 8] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Feb 12 18:14:22.120934 2022] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Sat Feb 12 18:14:22.120955 2022] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Feb 13 08:55:10.247365 2022] [core:warn] [pid 8] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Feb 13 08:55:10.253952 2022] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Sun Feb 13 08:55:10.253982 2022] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

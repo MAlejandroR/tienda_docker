@@ -3,7 +3,7 @@
 class Constantes
 {
     const HOST='localhost';
-    const USER='user';
-    const PASS='test';
+    const USER='root';
+    const PASS='root';
     const DATABASE='dwes';
 }
